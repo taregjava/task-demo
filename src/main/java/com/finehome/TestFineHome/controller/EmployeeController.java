@@ -47,9 +47,7 @@ public class EmployeeController {
     }
 
     @GetMapping
-    public List<EmployeeBuilder> index(@RequestParam(value = "page", defaultValue = "1") int page,
-                                       @RequestParam(value = "page_size", defaultValue = "8") int pageSize,
-                                       HttpServletRequest request) {
+    public List<EmployeeBuilder> index() {
 
        List<EmployeeBuilder> employeeList = employeeService.findAll();
 
